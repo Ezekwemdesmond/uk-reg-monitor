@@ -1,6 +1,10 @@
 # uk-reg-monitor
 
+[![PyPI version](https://badge.fury.io/py/uk-reg-monitor.svg)](https://pypi.org/project/uk-reg-monitor/)
+
 **uk-reg-monitor** is an open-source Python package that monitors UK employment legislation for material changes on a schedule. It acts as a companion client to the [UK Employment Law Change Detector API](#the-uk-employment-law-change-detector-api): you configure which Acts of Parliament to watch and how often to check, and uk-reg-monitor handles the scheduling, calls the API on each cycle, and routes any detected changes to your team via email, Slack, or a generic webhook.
+
+Available on PyPI: https://pypi.org/project/uk-reg-monitor/
 
 ---
 
@@ -24,9 +28,15 @@ Requires Python 3.12 or later.
 
 ## Quickstart
 
-### Step 1 — Create your config.yaml
+### Step 1 — Run the setup wizard
 
-Create a `config.yaml` file in your working directory:
+```bash
+uk-reg-monitor init
+```
+
+The wizard guides you through choosing which Acts to monitor, how often to check, and how to receive notifications. It writes `config.yaml` to your working directory and validates it automatically.
+
+**Prefer to configure manually?** Create `config.yaml` by hand:
 
 ```yaml
 api:
@@ -70,15 +80,9 @@ notifications:
       Content-Type: "application/json"
 ```
 
-### Step 2 — Validate your configuration
+Then run `uk-reg-monitor validate` to check it.
 
-```bash
-uk-reg-monitor validate
-```
-
-This checks your `config.yaml` is valid and prints a summary of what will run — no API calls are made.
-
-### Step 3 — Start the monitor
+### Step 2 — Start the monitor
 
 ```bash
 uk-reg-monitor start
@@ -89,6 +93,15 @@ The monitor runs an immediate check on startup, then repeats on the configured s
 ---
 
 ## CLI Commands
+
+### `uk-reg-monitor init`
+
+Runs the interactive setup wizard. Guides you through choosing Acts, schedule frequency, and notification channels, then writes `config.yaml` and validates it automatically. Passwords are collected without echoing to the terminal.
+
+```bash
+uk-reg-monitor init
+uk-reg-monitor init --config /path/to/config.yaml
+```
 
 ### `uk-reg-monitor start`
 

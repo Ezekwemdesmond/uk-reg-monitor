@@ -38,16 +38,18 @@ def test_analyse_act_strips_trailing_slash():
 
 
 @responses.activate
-def test_analyse_act_sends_act_url_and_name():
-    """Payload contains both act_url and act_name."""
+def test_analyse_act_sends_correct_payload():
+    """Payload contains url and min_confidence=0.75, nothing else."""
     responses.post(
         "https://api.example.com/analyse",
         json={"material_change": False},
     )
     analyse_act("https://api.example.com", "https://leg.gov.uk/1", "Test Act")
     body = responses.calls[0].request.body
-    assert b"act_url" in body
-    assert b"act_name" in body
+    assert b'"url"' in body
+    assert b"0.75" in body
+    assert b"act_url" not in body
+    assert b"act_name" not in body
 
 
 @responses.activate

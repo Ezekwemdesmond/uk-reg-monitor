@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.2.4] - 2026-04-13
+
+### Added
+- Published to PyPI at https://pypi.org/project/uk-reg-monitor/
+- `README.md`: PyPI version badge and PyPI URL added below the title
+
+## [0.2.3] - 2026-04-13
+
+### Added
+- `uk-reg-monitor init` — interactive setup wizard that collects Acts, schedule, and notification settings, writes `config.yaml`, and validates it automatically
+  - Numbered menus with sensible defaults (Enter to accept)
+  - Accepts comma-separated act selections or `5` for all
+  - Re-prompts gracefully on invalid input instead of crashing
+  - Passwords collected via `getpass` (no terminal echo)
+  - Runs `validate` automatically after writing the file and prints next steps
+- `__main__.py` — enables `python -m uk_reg_monitor` as an entry point
+- 9 pytest tests covering the init wizard (defaults, act selection, all schedule types, all notification channels, invalid-then-valid re-prompt)
+
+### Changed
+- `README.md`: `uk-reg-monitor init` is now Step 1 of the quickstart; manual config.yaml creation moved to an alternative option; `init` added to the CLI Commands reference
+
 ## [0.2.2] - 2026-04-13
 
 ### Changed

@@ -56,7 +56,7 @@ def analyse_act(
         APIError: If all retries are exhausted.
     """
     url = f"{base_url.rstrip('/')}/analyse"
-    payload = {"act_url": act_url, "act_name": act_name}
+    payload = {"url": act_url, "min_confidence": 0.75}
     last_error = None
 
     for attempt in range(1, max_retries + 1):

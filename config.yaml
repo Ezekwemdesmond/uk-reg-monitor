@@ -12,10 +12,12 @@ schedule:
 acts:
   - url: "https://www.legislation.gov.uk/ukpga/1996/18"
     name: "Employment Rights Act 1996"
+  - url: "https://www.legislation.gov.uk/ukpga/1998/39"
+    name: "National Minimum Wage Act 1998"
   - url: "https://www.legislation.gov.uk/ukpga/2010/15"
     name: "Equality Act 2010"
-  - url: "https://www.legislation.gov.uk/ukpga/1992/52"
-    name: "Trade Union and Labour Relations (Consolidation) Act 1992"
+  - url: "https://www.legislation.gov.uk/uksi/1998/1833"
+    name: "Working Time Regulations 1998"
 
 notifications:
   email:
