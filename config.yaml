@@ -1,0 +1,41 @@
+# uk-reg-monitor configuration
+
+api:
+  base_url: "https://api.example.com"  # UK Employment Law Change Detector API
+  timeout: 30  # seconds
+
+schedule:
+  frequency: "daily"  # one of: hourly, daily, weekly
+  time: "08:00"       # HH:MM — used by daily and weekly
+  day: "monday"       # day of week — used by weekly only
+
+acts:
+  - url: "https://www.legislation.gov.uk/ukpga/1996/18"
+    name: "Employment Rights Act 1996"
+  - url: "https://www.legislation.gov.uk/ukpga/2010/15"
+    name: "Equality Act 2010"
+  - url: "https://www.legislation.gov.uk/ukpga/1992/52"
+    name: "Trade Union and Labour Relations (Consolidation) Act 1992"
+
+notifications:
+  email:
+    enabled: false
+    smtp_host: "smtp.example.com"
+    smtp_port: 587
+    use_tls: true
+    username: ""
+    password: ""
+    from_addr: "monitor@example.com"
+    to_addrs:
+      - "team@example.com"
+
+  slack:
+    enabled: false
+    webhook_url: ""
+
+  webhook:
+    enabled: false
+    url: ""
+    method: "POST"
+    headers:
+      Content-Type: "application/json"
