@@ -6,6 +6,9 @@
 - Published to PyPI at https://pypi.org/project/uk-reg-monitor/
 - `README.md`: PyPI version badge and PyPI URL added below the title
 
+### Changed
+- `pyproject.toml`: broadened Python compatibility from `>=3.12` to `>=3.9`
+
 ## [0.2.3] - 2026-04-13
 
 ### Added
