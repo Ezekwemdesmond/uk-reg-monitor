@@ -1,7 +1,7 @@
 # uk-reg-monitor configuration
 
 api:
-  base_url: "https://api.example.com"  # UK Employment Law Change Detector API
+  base_url: "https://uk-employment-law-change-detector.onrender.com"  # UK Employment Law Change Detector API
   timeout: 30  # seconds
 
 schedule:

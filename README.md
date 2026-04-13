@@ -30,7 +30,7 @@ Create a `config.yaml` file in your working directory:
 
 ```yaml
 api:
-  base_url: "https://your-detector-api-url.com"
+  base_url: "https://uk-employment-law-change-detector.onrender.com"
   timeout: 30
 
 schedule:
@@ -151,7 +151,9 @@ Enable any combination of channels in `config.yaml`. Notifications are only sent
 
 uk-reg-monitor delegates all intelligence to the **UK Employment Law Change Detector API**. That API analyses legislation pages and determines whether a material legislative change has occurred. uk-reg-monitor provides the scheduling, configuration, and notification layer on top.
 
-You will need access to a running instance of the detector API and its base URL before uk-reg-monitor can do anything useful. Set `api.base_url` in your `config.yaml` to point at it.
+The package connects to the **live hosted API** at `https://uk-employment-law-change-detector.onrender.com` by default — no additional setup is required. Interactive API documentation is available at [https://uk-employment-law-change-detector.onrender.com/docs](https://uk-employment-law-change-detector.onrender.com/docs).
+
+If you need to point at a different instance, set `api.base_url` in your `config.yaml`.
 
 ---
 

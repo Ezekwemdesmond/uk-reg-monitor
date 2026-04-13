@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.2] - 2026-04-13
+
+### Changed
+- `config.yaml`: `api.base_url` updated from placeholder to the live hosted API at `https://uk-employment-law-change-detector.onrender.com`
+- `README.md`: noted that the package connects to the live hosted API by default; updated quickstart sample `config.yaml` to use the live URL; added link to live API docs at `https://uk-employment-law-change-detector.onrender.com/docs`
+
 ## [0.2.1] - 2026-04-13
 
 ### Added
