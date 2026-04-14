@@ -22,7 +22,7 @@ cd uk-reg-monitor
 pip install -e ".[dev]"
 ```
 
-Requires Python 3.12 or later.
+Requires Python 3.9 or later.
 
 ---
 
