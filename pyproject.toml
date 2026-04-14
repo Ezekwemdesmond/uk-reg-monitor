@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "uk-reg-monitor"
-version = "0.2.4"
+version = "0.2.5"
 description = "A Python package that monitors UK legislation for material changes and sends notifications via email, Slack, or webhook"
 readme = "README.md"
 license = {text = "MIT"}

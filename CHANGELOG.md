@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.5] - 2026-04-14
+
+### Fixed
+- Re-upload to PyPI to resolve previous publish issue; no code changes
+
 ## [0.2.4] - 2026-04-13
 
 ### Added
