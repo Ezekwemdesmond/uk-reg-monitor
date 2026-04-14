@@ -1,6 +1,6 @@
 # uk-reg-monitor
 
-[![PyPI version](https://badge.fury.io/py/uk-reg-monitor.svg)](https://pypi.org/project/uk-reg-monitor/)
+[![PyPI version](https://img.shields.io/pypi/v/uk-reg-monitor?color=blue)](https://pypi.org/project/uk-reg-monitor/)
 
 **uk-reg-monitor** is an open-source Python package that monitors UK employment legislation for material changes on a schedule. It acts as a companion client to the [UK Employment Law Change Detector API](#the-uk-employment-law-change-detector-api): you configure which Acts of Parliament to watch and how often to check, and uk-reg-monitor handles the scheduling, calls the API on each cycle, and routes any detected changes to your team via email, Slack, or a generic webhook.
 
